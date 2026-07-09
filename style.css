@@ -280,3 +280,285 @@ footer.site p { margin: 0 0 8px; }
   .seal { width: 42px; height: 42px; font-size: 16px; }
   nav.site a { margin-left: 16px; font-size: 13px; }
 }
+/* ============================================================
+   Afterpath — design tokens
+   Signature: the "letter" motif. Every story is treated as a
+   sealed letter passed from a senpai parent to a kouhai parent —
+   torn-edge cards, a wax-seal initial badge instead of a photo,
+   and a hero built from an illustrated envelope + reading light.
+   ============================================================ */
+
+:root {
+  --navy: #1F3A5F;
+  --navy-deep: #142A45;
+  --navy-tint: #EDF1F6;
+  --coral: #C0714B;
+  --coral-deep: #A85F3D;
+  --coral-tint: #F3E4DA;
+  --sage: #5E7F68;
+  --sage-tint: #E7EEE7;
+  --paper: #FFFFFF;
+  --paper-warm: #FAF7F1;
+  --ink: #24313D;
+  --muted: #6B7178;
+  --line: #E6E1D8;
+
+  --space-1: 8px;
+  --space-2: 14px;
+  --space-3: 22px;
+  --space-4: 34px;
+  --space-5: 56px;
+  --space-6: 88px;
+
+  --radius: 3px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.95;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3, .brand, .quote-mark {
+  font-family: "Shippori Mincho", serif;
+  color: var(--navy);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+a { color: var(--coral); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible, .card:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wrap { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+.wrap.narrow { max-width: 680px; }
+
+/* ---------- Header ---------- */
+header.site {
+  background: var(--navy);
+  padding: 26px 0;
+}
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.brand { color: #fff; font-size: 23px; margin: 0; letter-spacing: 0.02em; }
+.brand span { color: #E1A883; }
+nav.site a {
+  color: #C7D4E4;
+  margin-left: 26px;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+nav.site a:first-child { margin-left: 0; }
+nav.site a:hover { color: #fff; text-decoration: none; }
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: var(--space-6) 0 var(--space-5);
+  background: var(--paper-warm);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+.hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-5); align-items: center; }
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--coral);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-bottom: 18px;
+}
+.eyebrow::before {
+  content: "";
+  width: 18px; height: 1px;
+  background: var(--coral);
+  display: inline-block;
+}
+.hero h1 {
+  font-size: 42px;
+  margin: 0 0 22px;
+  letter-spacing: 0.01em;
+}
+.hero p.lead {
+  font-size: 16.5px;
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 0 30px;
+}
+.hero-art { display: flex; align-items: center; justify-content: center; }
+.hero-art svg { width: 100%; max-width: 320px; height: auto; }
+
+.btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  background: var(--coral);
+  color: #fff;
+  padding: 13px 24px;
+  border-radius: var(--radius);
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.btn:hover { background: var(--coral-deep); text-decoration: none; }
+.btn.ghost {
+  background: transparent;
+  border: 1px solid var(--navy);
+  color: var(--navy);
+}
+.btn.ghost:hover { background: var(--navy-tint); text-decoration: none; }
+
+/* ---------- Section rhythm ---------- */
+.section { padding: var(--space-5) 0; }
+.section.alt { background: var(--paper-warm); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-head { margin-bottom: var(--space-4); }
+.section-label {
+  font-size: 12.5px;
+  color: var(--coral);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 0 0 10px;
+}
+.section-title-lg { font-size: 26px; margin: 0; }
+.section-sub { color: var(--muted); font-size: 15px; margin: 10px 0 0; max-width: 560px; }
+
+/* ---------- Letter cards (signature element) ---------- */
+.letters { display: flex; flex-direction: column; gap: var(--space-3); }
+
+.letter {
+  position: relative;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 20px;
+  padding: 28px 30px 28px 24px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgba(31,58,95,0.04);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.letter:hover { box-shadow: 0 8px 24px rgba(31,58,95,0.09); transform: translateY(-1px); }
+.letter::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 14px; bottom: 14px;
+  width: 3px;
+  background: var(--seal, var(--coral));
+  border-radius: 0 2px 2px 0;
+}
+
+.seal {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: #fff;
+  background: var(--seal, var(--coral));
+  align-self: start;
+}
+
+.letter-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 10px;
+  margin-bottom: 9px;
+  color: var(--seal, var(--coral));
+  background: color-mix(in srgb, var(--seal, var(--coral)) 14%, white);
+}
+.letter h3 { font-size: 19px; margin: 0 0 8px; line-height: 1.5; }
+.letter p.excerpt { margin: 0; color: var(--muted); font-size: 14.5px; }
+.letter .meta { font-size: 12.5px; color: var(--muted); margin-top: 10px; }
+
+.letter.placeholder {
+  grid-template-columns: 1fr;
+  border-style: dashed;
+  box-shadow: none;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+.letter.placeholder::before { display: none; }
+
+/* ---------- Trust strip ---------- */
+.trust-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+.trust-item { display: flex; gap: 14px; align-items: flex-start; }
+.trust-item svg { flex: none; width: 30px; height: 30px; color: var(--sage); }
+.trust-item h4 { margin: 0 0 4px; font-size: 15px; color: var(--navy); font-family: "Zen Kaku Gothic New", sans-serif; font-weight: 700; }
+.trust-item p { margin: 0; font-size: 13.5px; color: var(--muted); }
+
+/* ---------- Article page ---------- */
+.article-head { padding: var(--space-5) 0 var(--space-4); border-bottom: 1px solid var(--line); background: var(--paper-warm); }
+.article-head .letter-tag { font-size: 11.5px; }
+.article-head h1 { font-size: 31px; margin: 16px 0 14px; }
+.byline { display: flex; align-items: center; gap: 12px; font-size: 13.5px; color: var(--muted); }
+.byline .seal { width: 38px; height: 38px; font-size: 15px; }
+
+.article-body { padding: var(--space-5) 0 var(--space-3); }
+.article-body .wrap { max-width: 660px; }
+.article-body h2 { font-size: 19px; margin: 44px 0 14px; }
+.article-body p { margin: 0 0 20px; }
+.pull {
+  font-family: "Shippori Mincho", serif;
+  font-size: 19px;
+  color: var(--navy);
+  border-left: 3px solid var(--coral);
+  padding: 2px 0 2px 22px;
+  margin: 36px 0;
+}
+.paid-note {
+  margin-top: 46px;
+  padding: 26px 28px;
+  background: var(--navy-tint);
+  border-radius: var(--radius);
+}
+.paid-note h3 { margin: 0 0 8px; font-size: 16px; font-family: "Zen Kaku Gothic New", sans-serif; }
+.paid-note p { margin: 0; color: var(--muted); font-size: 14px; }
+
+.back-link { display: inline-block; margin: var(--space-4) 0 0; font-size: 14px; }
+
+/* ---------- Footer ---------- */
+footer.site {
+  padding: var(--space-4) 0 var(--space-5);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12.5px;
+}
+footer.site a { color: var(--navy); }
+footer.site p { margin: 0 0 8px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero-art { order: -1; max-width: 220px; margin: 0 auto; }
+  .hero h1 { font-size: 30px; }
+  .article-head h1 { font-size: 25px; }
+  .trust-strip { grid-template-columns: 1fr; }
+  .letter { grid-template-columns: 48px 1fr; padding: 22px 20px; gap: 14px; }
+  .seal { width: 42px; height: 42px; font-size: 16px; }
+  nav.site a { margin-left: 16px; font-size: 13px; }
+}
