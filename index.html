@@ -24,38 +24,175 @@
 
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow">中学受験 → 大学受験、その先まで</span>
-    <h1>あの時、こう聞けていたら。<br>先輩保護者の、生の声。</h1>
-    <p class="lead">
-      中学受験と大学受験の両方を終え、子育てが一段落した先輩保護者たちが、
-      成功したことも、後悔していることも、飾らずに語る場所です。
-      一般論ではなく、一人ひとりの実体験から、今の決断のヒントを見つけてください。
-    </p>
-    <a class="btn" href="#articles">体験談を読む</a>
-    <a class="btn ghost" href="join.html">先輩として話してみる</a>
+    <div>
+      <span class="eyebrow">中学受験 → 大学受験、その先まで</span>
+      <h1>あの時、こう聞けていたら。<br>先輩保護者の、生の声。</h1>
+      <p class="lead">
+        中学受験と大学受験の両方を終え、子育てが一段落した先輩保護者たちが、
+        成功したことも、後悔していることも、飾らずに語る場所です。
+        一般論ではなく、一人ひとりの実体験から、今の決断のヒントを見つけてください。
+      </p>
+      <div class="btn-row">
+        <a class="btn" href="#letters">体験談を読む</a>
+        <a class="btn ghost" href="join.html">先輩として話してみる</a>
+      </div>
+    </div>
+    <div class="hero-art"><svg viewBox="0 0 320 300" role="img" aria-label="手紙とあかりのイラスト">
+  <circle cx="180" cy="120" r="118" fill="var(--coral-tint)" opacity="0.55"/>
+  <circle cx="90" cy="200" r="70" fill="var(--sage-tint)" opacity="0.6"/>
+  <!-- lamp -->
+  <line x1="245" y1="70" x2="245" y2="40" stroke="var(--sage)" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M225,70 Q245,50 265,70 L272,92 Q245,102 218,92 Z" fill="none" stroke="var(--sage)" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="245" cy="70" r="3" fill="var(--sage)"/>
+  <!-- letter peeking -->
+  <rect x="98" y="96" width="126" height="88" rx="3" fill="var(--paper)" stroke="var(--coral)" stroke-width="2"/>
+  <line x1="118" y1="120" x2="204" y2="120" stroke="var(--muted)" stroke-width="2.2" stroke-linecap="round" opacity="0.55"/>
+  <line x1="118" y1="136" x2="188" y2="136" stroke="var(--muted)" stroke-width="2.2" stroke-linecap="round" opacity="0.55"/>
+  <line x1="118" y1="152" x2="196" y2="152" stroke="var(--muted)" stroke-width="2.2" stroke-linecap="round" opacity="0.55"/>
+  <!-- envelope -->
+  <rect x="70" y="150" width="182" height="118" rx="4" fill="var(--paper-warm)" stroke="var(--navy)" stroke-width="2.6"/>
+  <path d="M70,150 L161,214 L252,150" fill="none" stroke="var(--navy)" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- sprig -->
+  <path d="M52,268 C58,244 70,230 84,222" fill="none" stroke="var(--sage)" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="60" cy="238" rx="9" ry="5" fill="var(--sage)" transform="rotate(-30 60 238)"/>
+  <ellipse cx="72" cy="226" rx="9" ry="5" fill="var(--sage)" transform="rotate(-15 72 226)"/>
+</svg></div>
   </div>
 </section>
 
-<div class="wrap" id="articles">
+<section class="section" id="letters">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-label">先輩たちからの手紙</p>
+      <h2 class="section-title-lg">10人の、それぞれの受験</h2>
+      <p class="section-sub">学校のタイプも、家庭の事情も、地域も違う先輩たちの声を集めています。自分に近い状況の先輩を見つけてください。</p>
+    </div>
+    <div class="letters">
 
-  <p class="section-title">最新の体験談</p>
-
-  <a class="card" href="article-sample.html">
-    <span class="tag">難関校・共働き家庭</span>
-    <h3>「偏差値だけ見て、子どもの表情を見ていなかった」</h3>
-    <p>息子が第一志望に合格するまでの3年間。塾選びの失敗と、家庭内でぶつかった意見の違い、今だから話せることを聞きました。</p>
+  <a class="letter" href="article-01.html" style="--seal: var(--coral)">
+    <span class="seal">N</span>
+    <span>
+      <span class="letter-tag">難関校・共働き家庭</span>
+      <h3>「偏差値だけ見て、子どもの表情を見ていなかった」</h3>
+      <p class="excerpt">息子が第一志望に合格するまでの3年間。塾選びの失敗と、家庭内でぶつかった意見の違い、今だから話せることを聞きました。</p>
+      <p class="meta">語り手：Nさん（都内在住・共働き）</p>
+    </span>
   </a>
-
-  <div class="card placeholder">
-    次の体験談を準備中です。先輩保護者への取材が進み次第、順次公開していきます。
+  <a class="letter" href="article-02.html" style="--seal: var(--navy)">
+    <span class="seal">A</span>
+    <span>
+      <span class="letter-tag">中堅校・専業主婦家庭</span>
+      <h3>「塾に行かせなかった後悔と、行かせてよかったこと」</h3>
+      <p class="excerpt">小5の冬まで自宅学習だけで進めていた娘。切り替えの遅さを悔やみつつも、その後の塾との付き合い方には自信があると言います。</p>
+      <p class="meta">語り手：Aさん（都内在住・専業主婦）</p>
+    </span>
+  </a>
+  <a class="letter" href="article-03.html" style="--seal: var(--sage)">
+    <span class="seal">R</span>
+    <span>
+      <span class="letter-tag">大学附属校・ひとり親家庭</span>
+      <h3>「一人で決めるプレッシャーを、誰にも話せなかった」</h3>
+      <p class="excerpt">志望校選びも、塾の相談も、すべて一人で決めてきた3年間。「誰かに話したかったけれど、話す相手がいなかった」という本音を伺いました。</p>
+      <p class="meta">語り手：Rさん（都内在住・ひとり親）</p>
+    </span>
+  </a>
+  <a class="letter" href="article-04.html" style="--seal: var(--coral)">
+    <span class="seal">K</span>
+    <span>
+      <span class="letter-tag">共学校・複数子の受験</span>
+      <h3>「上の子と同じやり方が、下の子には合わなかった」</h3>
+      <p class="excerpt">上の子でうまくいった塾・勉強法を、そのまま下の子にも当てはめてしまった前半戦。途中で方針転換した経緯を聞きました。</p>
+      <p class="meta">語り手：Kさん（神奈川県在住）</p>
+    </span>
+  </a>
+  <a class="letter" href="article-05.html" style="--seal: var(--navy)">
+    <span class="seal">M</span>
+    <span>
+      <span class="letter-tag">帰国子女・国際生入試</span>
+      <h3>「英語はできるのに、国語で苦労した3年間」</h3>
+      <p class="excerpt">帰国子女枠での受験を考えていたはずが、思わぬ壁は「国語」でした。情報が少ない中でどう対策したかを伺いました。</p>
+      <p class="meta">語り手：Mさん（都内在住・元海外駐在家庭）</p>
+    </span>
+  </a>
+  <a class="letter" href="article-06.html" style="--seal: var(--sage)">
+    <span class="seal">S</span>
+    <span>
+      <span class="letter-tag">塾なし自宅学習</span>
+      <h3>「塾に通わず合格した息子と、周りからの視線」</h3>
+      <p class="excerpt">経済的な事情もあり、塾なしでの受験を選択。「なぜ塾に行かせないの」という周囲の反応と向き合った日々を聞きました。</p>
+      <p class="meta">語り手：Sさん（埼玉県在住）</p>
+    </span>
+  </a>
+  <a class="letter" href="article-07.html" style="--seal: var(--coral)">
+    <span class="seal">T</span>
+    <span>
+      <span class="letter-tag">発達特性のある子</span>
+      <h3>「”普通の受験”という言葉に、ずっと違和感があった」</h3>
+      <p class="excerpt">集中の波が大きい子どもの特性と、中学受験の標準的な進め方との間で悩み続けた3年間。試行錯誤の中身を聞きました。</p>
+      <p class="meta">語り手：Tさん（都内在住）</p>
+    </span>
+  </a>
+  <a class="letter" href="article-08.html" style="--seal: var(--navy)">
+    <span class="seal">Y</span>
+    <span>
+      <span class="letter-tag">経済的事情での塾選び</span>
+      <h3>「奨学金と特待生制度を、遠慮せず調べればよかった」</h3>
+      <p class="excerpt">家計を理由に志望校の選択肢を狭めていたところ、特待生制度の存在を知って状況が変わったという体験談です。</p>
+      <p class="meta">語り手：Yさん（千葉県在住）</p>
+    </span>
+  </a>
+  <a class="letter" href="article-09.html" style="--seal: var(--sage)">
+    <span class="seal">H</span>
+    <span>
+      <span class="letter-tag">関西・地方都市</span>
+      <h3>「東京の情報ばかりで、地元の情報が全然なかった」</h3>
+      <p class="excerpt">中学受験の情報のほとんどが首都圏基準。関西エリアならではの事情とどう向き合ったかを聞きました。</p>
+      <p class="meta">語り手：Hさん（大阪府在住）</p>
+    </span>
+  </a>
+  <a class="letter" href="article-10.html" style="--seal: var(--coral)">
+    <span class="seal">W</span>
+    <span>
+      <span class="letter-tag">地方都市・少数派の受験</span>
+      <h3>「受験すると言った瞬間、周りに驚かれた地域でした」</h3>
+      <p class="excerpt">中学受験自体が珍しい地域で、情報も仲間も少ない中どう乗り越えたか。孤独感との付き合い方を聞きました。</p>
+      <p class="meta">語り手：Wさん（地方都市在住）</p>
+    </span>
+  </a>
+      <div class="letter placeholder">
+        次の体験談を準備中です。先輩保護者への取材が進み次第、順次公開していきます。
+      </div>
+    </div>
   </div>
+</section>
 
-</div>
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-label">Afterpathが大切にしていること</p>
+      <h2 class="section-title-lg">安心して話せる、頼れる場所に</h2>
+    </div>
+    <div class="trust-strip">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-8.5C.5 8.5 3 5 6.5 5c2 0 3.5 1 5.5 3 2-2 3.5-3 5.5-3 3.5 0 6 3.5 4 7.5C19 16.65 12 21 12 21z"/></svg>
+        <div><h4>失敗も隠さない</h4><p>うまくいった話だけでなく、後悔していることこそ価値があると考えています。</p></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V6a2 2 0 012-2h10a2 2 0 012 2v13.5M4 19.5A2.5 2.5 0 016.5 17H18M4 19.5A2.5 2.5 0 006.5 22H18a2 2 0 002-2v-3"/></svg>
+        <div><h4>当事者の言葉</h4><p>専門家の一般論ではなく、実際に経験した一人の保護者の言葉として届けます。</p></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        <div><h4>個別に相談できる</h4><p>記事を読むだけでなく、気になった先輩保護者に直接質問できる場を目指しています。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer class="site">
   <div class="wrap">
     <p>&copy; 2026 Afterpath ／ 掲載内容は個人の体験談であり、教育的な助言や結果を保証するものではありません。</p>
-    <p><a href="about.html">このサイトについて</a> ・ <a href="join.html">先輩保護者として協力する</a></p>
+    <p><a href="index.html">記事一覧に戻る</a> ・ <a href="about.html">このサイトについて</a> ・ <a href="join.html">先輩保護者として協力する</a></p>
   </div>
 </footer>
 
